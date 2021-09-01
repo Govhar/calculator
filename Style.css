@@ -1,0 +1,133 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  font-family: Gotham Rounded, sans-serif;
+  font-weight: normal;
+  font-size: 17px;
+}
+#out{
+  font-size: 30px;
+}
+body {
+  margin: 0;
+  padding: 0;
+  /* background: linear-gradient(to right, rgb(245, 245, 240), rgb(27, 27, 27)); */
+  background-image: url("digits2.jpg");
+  background-color: #cccccc;
+}
+
+.calculator-grid {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  /* min-height: 100vh; */
+  grid-template-columns: repeat(4, 80px);
+  grid-template-rows: minmax(100px, auto) repeat(5, 80px);
+  margin: 50px 0;
+}
+
+.calculator-grid>button {
+  cursor: pointer;
+  font-size: 2rem;
+  border: 1px, solid #FFFFFF;
+  outline: none;
+  background-color: rbga(255, 255, 255, 0.75);
+  box-shadow: 0 1px rgba(255, 255, 255, .2) inset, 0 3px 5px rgba(0, 1, 6, .5), 0 0 1px 1px rgba(0, 1, 6, .2);
+  transition: .2s ease-in-out;
+  background: linear-gradient(#0f0f0f, #4e4c4c 48%, #9e9595 52%, #fcf2f2);
+}
+
+button:active {
+  top: 1px;
+  background: linear-gradient(rgb(76, 77, 82), rgb(56, 57, 62)) rgb(76, 77, 82);
+  box-shadow: 0 0 1px rgba(0, 0, 0, .5) inset, 0 2px 3px rgba(0, 0, 0, .5) inset, 0 1px 1px rgba(255, 255, 255, .1);
+}
+
+button:hover:not(:active) {
+  background: linear-gradient(rgb(126, 126, 134), rgb(72, 72, 77)) rgb(126, 126, 134);
+}
+
+.span-two {
+  /* grid-column: span 2; */
+  color: #070707;
+  background-color: rgba(21, 0, 139, 0.8);
+}
+
+.span-three {
+  /* grid-column: span 2; */
+  color: #0c0c0c;
+  background-color: rgba(9, 0, 139, 0.8);
+  width: 80px;
+  height: 80px;
+}
+
+.output {
+  grid-column: 1 / -1;
+  background-color: rgba(0, 0, 0, 0.75);
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-around;
+  flex-direction: column;
+  padding: 10px;
+  word-wrap: break-word;
+  word-break: break-all;
+  /* overflow-x: hidden; */
+  color: white
+}
+
+.output .previous-operand {
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 1.5rem;
+}
+
+.output .current-operand {
+  color: white;
+  font-size: 2.5rem;
+}
+
+/* .history {
+   background-color: red;
+   width: 200 px;
+   height: 100 px;
+} */
+
+.mainDiv {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+#calc-history {
+  float: right;
+  min-width: 220px;
+  height: 578px;
+  /* background-color: #636363; */
+  border-radius: 5px;
+  margin-top: 6px;
+  padding: 10px;
+  /* box-shadow: 0px 5px 10px #444444 inset; */
+  /* background-color: rbga(255, 255, 255, 0.75);
+  box-shadow: 0 1px rgba(255, 255, 255, .2) inset, 0 3px 5px rgba(0, 1, 6, .5), 0 0 1px 1px rgba(0, 1, 6, .2);
+  transition: .2s ease-in-out;
+  background: linear-gradient(#474646, #665f5f 48%, #9e9595 52%, #fcf2f2); */
+  background-color: #000000;
+ background-image: linear-gradient(315deg, #747272 0%, #000000 74%);
+ color: white;
+
+  
+}
+
+#calc-history-box {
+  width: 100% !important;
+  min-height: 90%;
+  max-height: 90% !important;
+  resize: none;
+  border: 1px solid white;
+}
+
+#calc-history hr {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+
